@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        <title>About Me</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+      </head>
+      <style>
+		.footer {
+		  position: fixed;
+		  left: 0;
+		  bottom: 0;
+		  width: 100%;
+		  background-color: grey;
+		  color: white;
+		  text-align: center;
+		}
+		</style>
+      <body>
+      	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+		  <!-- Links -->
+			<ul class="navbar-nav">
+			    <li class="nav-item">
+			      <a class="nav-link" href="mypage_bootstrap.html">Home</a>
+			    </li>
+			    <li class="nav-item">
+			    	<a class="nav-link" href="projects.html">Projects</a>
+			    </li>
+			</ul>
+			<ul class="navbar-nav ml-auto">
+			    <a class="navbar-brand" href="https://github.com/siju9917">
+			    <img src="https://banner2.cleanpng.com/20180704/uxe/kisspng-github-computer-icons-icon-design-desktop-wallpape-5b3d36142dd125.8636932415307381961877.jpg" width="30" height="30" alt="">
+			  </a>
+			 </ul>
+		 
+		</nav>
+		<div class="container">
+			<h1> Add New Interest </h1>
+			<form>
+			  <div class="form-group">
+			    <label for="InterestName">Interest Name</label>
+			    <textarea class="form-control" id="InterestName" rows="1" placeholder="Name your interest"></textarea>
+			  </div>	
+			  <div class="form-group">
+			    <label for="InterestDescription">Text About Interest</label>
+			    <textarea class="form-control" id="InterestDescription" rows="3" placeholder="Describe your interest"></textarea>
+			  </div>	
+			  <div class="row">
+  				<div class="col-sm-6">		  
+					  <div class="form-group">
+					    <label for="exampleFormControlFile1">Upload Local Image:</label>
+					    <input type="file" class="form-control-file" id="uploadImage">
+					  </div>
+				</div>
+				<div class="col-sm-6">		  
+					  <div class="form-group">
+					    <label for="TweetNumber">Select # of Tweets to Display</label>
+					    <select class="form-control" id="TweetNumber">
+					      <option>1</option>
+					      <option>2</option>
+					      <option>3</option>
+					      <option>4</option>
+					      <option>5</option>
+					    </select>
+					  </div>
+				</div>
+			</div>
+			<br>
+			<p> On a scale 1-5, how interested in this are you?</p>
+			  <div class="form-check form-check-inline">
+				  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+				  <label class="form-check-label" for="inlineRadio1">1</label>
+				</div>
+			<div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+			  <label class="form-check-label" for="inlineRadio2">2</label>
+			  </div>
+			  <div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+			  <label class="form-check-label" for="inlineRadio2">3</label>
+			  </div>
+			  <div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+			  <label class="form-check-label" for="inlineRadio2">4</label>
+			  </div>
+			  <div class="form-check form-check-inline">
+			  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+			  <label class="form-check-label" for="inlineRadio2">5</label>
+			  </div>
+			  <br><br>
+			  <p>Login to Finish Submitting</p>
+			  <div class="row">
+  				<div class="col-sm-6">		  
+					  <div class="form-group">
+					    <textarea class="form-control" id="UserName" rows="1" placeholder="Username"></textarea>
+					</div>
+			  	
+				</div>
+				<div class="col-sm-6">		  
+					  <div class="form-group">
+					    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+					  </div>
+				</div>
+			</div>
+
+
+			  <a href="mypage_bootstrap.html"<button type="submit" class="btn btn-primary">Submit</button></a>
+			</form>
+		</div>
+		<div class="footer">
+			  <a href="https://www.linkedin.com/in/simon-julien/">
+			    <img src="https://cdn.iconscout.com/icon/free/png-512/linkedin-53-227912.png" width="30" height="30" alt="">
+			  </a>
+			</div>
+		
+      </body>
+    </html>
