@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Question 4</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+		  <!-- Links -->
+			<ul class="navbar-nav">
+			    <li class="nav-item">
+			      <a class="nav-link" href="../index.html">Home</a>
+			    </li>
+			    <li class="nav-item">
+			    	<a class="nav-link" href="../projects.html">Projects</a>
+			    </li>
+				<li class="nav-item">
+			    	<a class="nav-link" href="../mypage.html">mypage(Vers 1.0)</a>
+			    </li>
+			    <li class="nav-item">
+			    	<a class="nav-link" href="../signup-modal/login.html">Sign Up Modal</a>
+			    </li>
+			    <li class="nav-item">
+			    	<a class="nav-link" href="../tic-tac-toe/tic-tac-toe.html">TicTacToe Game</a>
+			    </li>
+			    <li class="nav-item">
+			    	<a class="nav-link" href="../FlickrPage/FlickrPage.html">Flickr API Gallery</a>
+			    </li>
+			</ul>
+			<ul class="navbar-nav ml-auto">
+			    <a class="navbar-brand" href="https://github.com/siju9917">
+			    <img src="https://banner2.cleanpng.com/20180704/uxe/kisspng-github-computer-icons-icon-design-desktop-wallpape-5b3d36142dd125.8636932415307381961877.jpg" width="30" height="30" alt="">
+			  </a>
+			 </ul>
+		 
+		</nav>
+		<div style="background:SteelBlue; height:80px; display: flex; align-items: center; justify-content: center;">
+		
+			<div class="row" style=" vertical-align: middle;">
+				<select class="selectpicker" style="background-color:White; color:Black; margin:15px; height: 38px" id="NumPhotos">
+				  <option selected>--Number of Photos--</option>
+				  <option value="30">30</option>
+				  <option value="50">50</option>
+				  <option value="70">70</option>
+				</select>
+				<div class="active-cyan-4 mb-4" style= "margin:15px; width: 300px">
+				  <input class="form-control" type="text" placeholder="Search" aria-label="Search" id="keyword">
+				</div>
+				<div class="button" style= "margin:15px 15px 0px 0px">
+					<button class="btn btn-secondary" type="button" id="search" onclick="makeApiCall(1)">
+						Submit
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="row" style=" display: flex; align-items: center; justify-content: center;" id="cards">
+			<h1><b>API Integration:</b> Creating an Image Search accessing Flickr data</h1>
+		</div>
+		
+		
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	<script src="./Flickr.js"></script>
+	
+</body>
+</html>
