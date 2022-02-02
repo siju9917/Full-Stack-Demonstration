@@ -1,0 +1,73 @@
+{
+    "solar": [
+        {
+            "id" : 1,
+            "name" : "Rooftop Solar",
+            "price" : 5185,
+            "imageName" : "ResRoofTopSolar.jpg",
+            "description" : "Go to option for new solar investors as one can produce their own energy without requiring land space."
+        },
+        {
+            "id" : 2,
+            "name" : "Solar Roof",
+            "price" : 31113,
+            "imageName" : "solarTiles.jpg",
+            "description" : "Replace your current roof with Solar Roof and power your home with a fully integrated solar system."
+        },
+        {
+            "id" : 3,
+            "name" : "Garden Solar",
+            "price" : 4857,
+            "imageName" : "gardenSolar.jpg",
+            "description" : "Provide shade in your yard and garden while also powering your home with this 3000W system!"
+        }
+        
+    ],
+    "electricvehicles" : [
+        {
+            "id" : 4,
+            "name" : "Tesla Model 3",
+            "price" : 44500,
+            "imageName" : "teslaModel3.jpg",
+            "description" : "Rear-Wheel Drive Standard Long Range Some quick example text to build on the card title and make up the bulk of the card's content."
+        },
+        {
+            "id" : 5,
+            "name" : "GMC Hummer EV",
+            "price" : 79995,
+            "imageName" : "HummerEV2.jpg",
+            "description" : "Some quick example text to build on the card title and make up the bulk of the card's content."
+        },
+        {
+            "id" : 6,
+            "name" : "Nissan Leaf",
+            "price" : 31600,
+            "imageName" : "nissanLeaf.jpg",
+            "description" : "Some quick example text to build on the card title and make up the bulk of the card's content."
+        }
+
+    ],
+    "smartappliances" : [
+        {
+            "id" : 7,
+            "name" : "Smart Thermostat",
+            "price" : 199.99,
+            "imageName" : "smartTherm.jpg",
+            "description" : "Google Nest Thermostat 3rd Generation is a programmable smart thermostat that learns your schedule and the temperatures you like and programs itself to help you save energy and stay comfortable."
+        },
+        {
+            "id" : 8,
+            "name" : "Smart Shades",
+            "price" : 399,
+            "imageName" : "smartShades.JPG",
+            "description" : "MySmartRollerShades are the smartest, Bluetooth-enabled roller shades for interior windows. include a solar charging panel so you never have to plug them in."
+        },
+        {
+            "id" : 9,
+            "name" : "Smart Lighting",
+            "price" : 99.99,
+            "imageName" : "smartLighting.jpg",
+            "description" : "Each kit contains 4 Philips Hue White A19 60W Energy Star Certified LED Smart bulbs. Bulbs can be controlled remotely with the Philips Hue App or voice activated with Alexa."
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+<%- include('../partials/header') %>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark header">
+        <a class="navbar-brand branding" href="./index"><h1><span class="highlight">WATT</span>2BUY</h1></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link current" href="./index">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./survey">Survey</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./results">Results</a>
+                </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./store">Products</a>
+            </li>
+            </ul>
+            <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="./signup"><span class="fas fa-user"></span> Sign Up</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./login"><span class="fas fa-sign-in-alt"></span> Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./contactForm"><span class="fas fa-contact-Form"></span>Contact Us</a>
+            </li>
+            </ul>
+    
+            <div class="nav-info-items d-none d-lg-flex ">
+                <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
+                <span class="cart-info__icon mr-lg-3"><i class="fas fa-shopping-cart"></i></span>
+                <p class="mb-0 text-capitalize"><span id="item-count">0</span> items - $<span class="item-total">0</span></p>
+                </div>
+            </div>
+        </div>
+        </nav>
+
+
+    <header class="ccheader">
+        <h1>Contact Form</h1>	
+    </header>
+
+    <div class="wrapper">
+        <form method="post" action="" class="ccform">
+        <div class="ccfield-prepend">
+            <span class="ccform-addon"><i class="fa fa-user fa-2x"></i></span>
+            <input id="name" class="ccformfield" type="text" placeholder="Full Name" required>
+        </div>
+        <div class="ccfield-prepend">
+            <span class="ccform-addon"><i class="fa fa-envelope fa-2x"></i></span>
+            <input id="email" class="ccformfield" type="text" placeholder="Email" required>
+        </div>
+        <div class="ccfield-prepend">
+            <span class="ccform-addon"><i class="fa fa-mobile-phone fa-2x"></i></span>
+            <input id="phone" class="ccformfield" type="text" placeholder="Phone">
+        </div>
+        <div class="ccfield-prepend">
+            <span class="ccform-addon"><i class="fa fa-info fa-2x"></i></span>
+            <input id="subject" class="ccformfield" type="text" placeholder="Subject" required>
+        </div>
+        <div class="ccfield-prepend">
+            <span class="ccform-addon"><i class="fa fa-comment fa-2x"></i></span>
+            <textarea id="message" class="ccformfield" name="comments" rows="8" placeholder="Message" required></textarea>
+        </div>
+        <div class="ccfield-prepend">
+            <input onclick="submitForm()" class="ccbtn" type="reset" value="Submit">
+        </div>
+        </form>
+    </div>
+
+    <footer>
+        <p>WATT2BUY, Copyright &copy; 2020</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>

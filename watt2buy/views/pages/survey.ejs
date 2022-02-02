@@ -1,0 +1,258 @@
+<%- include('../partials/header') %>
+
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark header">
+    <a class="navbar-brand branding" href="./index"><h1><span class="highlight">WATT</span>2BUY</h1></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link current" href="./index">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./survey">Survey</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./results">Results</a>
+          </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./store">Products</a>
+        </li>
+        </ul>
+        <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="./signup"><span class="fas fa-user"></span> Sign Up</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./login"><span class="fas fa-sign-in-alt"></span> Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./contactForm"><span class="fas fa-contact-Form"></span>Contact Us</a>
+        </li>
+        </ul>
+
+        <div class="nav-info-items d-none d-lg-flex ">
+          <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
+            <span class="cart-info__icon mr-lg-3"><i class="fas fa-shopping-cart"></i></span>
+            <p class="mb-0 text-capitalize"><span id="item-count">0</span> items - $<span class="item-total">0</span></p>
+          </div>
+        </div>
+    </div>
+    </nav>
+
+
+    <section class="jumbotron text-center">
+        <div class="container" id="Survey_Results"  >
+          <h1>Artificial Sustainability Advisor Survey</h1>
+          <br>
+          <br>
+          <div id="message">
+          </div>
+          <div class="container p-3 my-3 bg-white border">
+             
+              <form>
+
+                  <!-- <div class="form-group">
+                    <label for="articleTitle"><h4>Name of Property</h4></label>Are you interested in installing solar panels?
+                    <input type="text" class="form-control" id="articleTitle" placeholder="Name">
+                  </div>
+
+                  <br>
+                  <br> -->
+
+
+                      <div class="form-group" align="left">
+                          <label for="articleTitle"><h4>What is your maximum investement budget?</h4></label>
+                          <div class="col"></div>
+                          <div class="col">
+                            <input type="text" class="form-control" id="budget" placeholder="$" align="center" style="width: 300px;" >
+                        </div>
+                      </div>
+
+                      <div class="form-group" align="left">
+                            <label for="articleTitle"><h4>How much money do you spend per month for power?</h4></label>
+                            <div class="col"></div>
+                            <div class="col">
+                                <input type="text" class="form-control" id="expend" placeholder="$" align="center" style="width: 300px;" >
+                            </div>
+                        </div>
+                    
+                        <div class="form-group" align="left">
+                            <label for="articleTitle"><h4>Latitude</h4></label>
+                            <div class="col"></div>
+                            <div class="col">
+                                <input type="text" class="form-control" id="lat" placeholder="°" align="center" style="width: 300px;" >
+                            </div>
+                        </div>
+                    
+                        <div class="form-group" align="left">
+                            <label for="articleTitle"><h4>Longitude</h4></label>
+                            <div class="col"></div>
+                            <div class="col">
+                                <input type="text" class="form-control" id="long" placeholder="°" align="center" style="width: 300px;" >
+                            </div>
+                        </div>
+
+                      <br>
+                      <br>
+
+                      <div class="form-group" align="left">
+                          <label for="articleTitle"><h4>What types of technologies are you interested in? Select all that apply: </h4></label>
+                          <form>
+                        
+                  <div class="col"></div>
+                          <div class="col">
+                <div class="checkboxes" align="left"  >
+                  <!-- <label for="solarInt"><input type="checkbox" id="solarInt" /> <span>Solar Panels</span></label> <br>
+                  <label for="EVInt"><input type="checkbox" id="EVInt" /> <span>Electric Vehicles</span></label>  <br>
+                  <label for="Other"><input type="checkbox" id="Other" /> <span>Smaller Appliances</span></label>  <br>-->
+
+                  <input type="radio" id="solarInt" name="test" value="on" align="right" >
+                  <label for="solarInt">Solar Panels</label><br>
+                  <input type="radio" id="EVInt" name="test" value="on" >
+                  <label for="EVInt">Electric Vehicles</label><br>
+                  <input type="radio" id="Other" name="test" value="on" >
+                  <label for="Other">Smaller Appliances</label><br>
+              </div>
+
+              </div>
+          
+              </form>
+                      </div>
+            <br>
+                      <br>
+                      
+                      <div class="form-group" align="left">
+                          <label for="articleTitle">  <h4>Do you have >4 sq meters of free yard space?</h4></label><br>
+                          <div class="col" id="freeSpace">
+                            <input type="radio" id="gardenAvail" name="space" value="yes" align="right">
+                            <label for="yes">Yes</label><br>
+                            <input type="radio" id="no" name="space" value="no">
+                            <label for="no">No</label><br>
+                          </div>
+                      </div>
+
+                      <br>
+                      <br>
+                      <div class="form-group" align="left">
+                          <label for="articleTitle"><h4>What kind of roofing do you have?</h4></label>
+                          <div class="col" id="roofingType">
+                            <input type="radio" id="wood" name="gender" value="wood" align="right" >
+                            <label for="wood">Wood Shake</label><br>
+                            <input type="radio" id="asphalt" name="gender" value="asphalt" >
+                            <label for="asphalt">Asphalt Shingles</label><br>
+                            <input type="radio" id="clay" name="gender" value="clay" >
+                            <label for="clay">Clay/ Cement</label><br>
+                          </div>
+                      </div>
+
+                      <br>
+                      <br>
+                      <div class="form-group" align="left">
+                          <label for="articleTitle"><h4>What functions are important for you to have in a car? Select all that apply:</h4></label>
+                          <div class="col">
+                <div class="checkboxes" align="left">
+                  <label for="Other"><input type="checkbox" id="attractive" /> <span>Attractive appearence</span></label> <br>
+                  <label for="truckBed"><input type="checkbox" id="truckBed" /> <span>Heavy lifting</span></label> <br>
+                  <label for="EV"><input type="checkbox" id="cheap" /> <span>Cost Effective</span></label>  <br>
+                  <label for="Other"><input type="checkbox" id="distance" /> <span>Long commutes to work</span></label> <br>
+                </div>
+
+
+                
+
+              </div>
+          
+                      </div>
+
+                      <br>
+                      <br>
+
+    <!-- 
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1>Artificial Sustainability Advisor Survey</h1>
+            <br>
+            <br>
+            <form>
+
+           
+
+                    
+                    <div class="form-group">
+                        <label for="articleTitle"><h4>Budget</h4></label>
+                        <input type="text" class="form-control" id="budget" placeholder="$">
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <div class="form-group">
+                        <label for="articleTitle"><h4>Are you interested in installing solar panels?</h4></label>
+                        <input type="text" class="form-control" id="solarInt" placeholder="yes or no">
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <div class="form-group">
+                        <label for="articleTitle"><h4>Are you interested in purchasing an Electric Vehicle?</h4></label>
+                        <input type="text" class="form-control" id="EVInt" placeholder="yes or no">
+                    </div>
+
+                    <br>
+                    <br>
+                    <div class="form-group">
+                        <label for="articleTitle"><h4>Do you have approximately ?sqft in your yard for solar pannels? (Best suited over a garden!)</h4></label>
+                        <input type="text" class="form-control" id="freeSpace" placeholder="yes or no">
+                    </div>
+
+                    <br>
+                    <br>
+                    <div class="form-group">
+                        <label for="articleTitle"><h4>Do you have proper roofing to install rooftop solar?</h4></label>
+                        <input type="text" class="form-control" id="roofingType" placeholder="yes or no">
+                    </div>
+
+                    <br>
+                    <br>
+                    <div class="form-group">
+                        <label for="articleTitle"><h4>Do you need a truck bed?</h4></label>
+                        <input type="text" class="form-control" id="truckBed" placeholder="yes or no">
+                    </div>
+
+                    <br>
+                    <br>
+
+                <a class="btn btn-primary btn-lg" onclick="resultCalc()" role="button">Calculate Results</a>
+
+            </form>
+        </div>-->
+                  <a class="btn btn-primary btn-lg" onclick="resultCalc()" role="button" style="color:white">Calculate Results</a>
+              </form>
+          </div>
+            </form>
+        </div>
+    </section>
+
+   <!-- <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Results</h1>
+        </div>
+    <div class= "row" id="resultsInSurvey">
+    </div>
+  </section>-->
+
+
+
+
+    <footer>
+        <p>WATT2BUY, Copyright &copy; 2020</p>
+    </footer>
+
+    <!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+</body>

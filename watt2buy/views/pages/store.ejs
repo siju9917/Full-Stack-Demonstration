@@ -1,0 +1,175 @@
+<%- include('../partials/header') %>
+
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark header">
+  <a class="navbar-brand branding" href="./index"><h1><span class="highlight">WATT</span>2BUY</h1></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+          <a class="nav-link current" href="./index">Home</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="./survey">Survey</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="./results">Results</a>
+        </li>
+      <li class="nav-item">
+          <a class="nav-link" href="./store">Products</a>
+      </li>
+      </ul>
+      <ul class="nav navbar-nav ml-auto">
+      <li class="nav-item">
+          <a class="nav-link" href="./signup"><span class="fas fa-user"></span> Sign Up</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="./login"><span class="fas fa-sign-in-alt"></span> Login</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="./contactForm"><span class="fas fa-contact-Form"></span>Contact Us</a>
+      </li>
+      </ul>
+
+      <div class="nav-info-items d-none d-lg-flex ">
+        <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
+          <span class="cart-info__icon mr-lg-3"><i class="fas fa-shopping-cart"></i></span>
+          <p class="mb-0 text-capitalize"><span id="item-count">0</span> items - $<span class="item-total">0</span></p>
+        </div>
+      </div>
+  </div>
+  </nav>
+
+    <section class="jumbotron text-center pos">
+      <div class="container">
+          <h1 class="jumbotron-heading">PRODUCTS</h1>
+          <p>
+          <p>
+            Here are the all the products we recommend. Take our survey to have personalized recomendations!
+          </p>
+      </div>
+      <br>
+
+<!-- =============================== CART ============================= -->
+      <div class="container-fluid">
+        <div class="row max-height justify-content-center align-items-center">
+          <div id="cart" class="cart">
+        
+            <!-- cart total -->
+            <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5" style="visibility: hidden;">
+              <h5>total</h5>
+              <h5> $ <strong id="cart-total" class="font-weight-bold"></strong> </h5>
+            </div>
+            <!--end cart total -->
+            <!-- cart buttons -->
+            <div class="cart-buttons-container mt-3 d-flex justify-content-between">
+              <a href="#" id="clear-cart" class="btn btn-outline-secondary btn-black text-uppercase" onclick="clearCart()">clear cart</a>
+              <a href="#" class="btn btn-outline-secondary text-uppercase btn-pink" onclick="purchaseClicked()">checkout</a>
+            </div>
+            <!--end of  cart buttons -->
+            <!--  -->
+          </div>
+        </div>
+      </div>
+      
+
+<!-- ================================================================== -->
+      <br><br><br><br><br>
+      <h1 style="text-align: center;">Solar</h1>
+
+    <!-- item1 -->
+    <div class="row" class="store-items" id="store-items">
+      <% items.solar.forEach(function(item){ %>
+      <div class="col-sm-12 col-md-4 col-lg-4 col-md-4 mx-auto my-3 store-item " data-item-id="<%= item.id %>">
+        <div class="card ">
+          <div class="img-container">
+            <img src="./img/<%= item.imageName %>" class="card-img-top store-img" alt="">
+            <span class="store-item-icon">
+              <i class="fas fa-shopping-cart"></i>
+            </span>
+          </div>
+          <div class="card-body">
+            <div class="card-text d-flex justify-content-between text-capitalize">
+              <h5 id="store-item-name"><%= item.name %></h5>
+              <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold"><%= item.price %></strong></h5>
+            </div>
+            <p class="card-text"><%= item.description %></p>
+          </div>
+        </div>
+      </div>
+    <% }) %>
+    </div> <!-- end of row 1 -->
+    
+
+<!-- ================================================================== -->
+    <br><br>
+    <h1  class="text-center">Electric Vehicles</h1>
+    <br>
+    <!-- item1 -->
+    <div class="row" class="store-items" id="store-items">
+        <% items.electricvehicles.forEach(function(item){ %>
+            <div class="col-sm-12 col-md-4 col-lg-4 col-md-4 mx-auto my-3 store-item " data-item-id="<%= item.id %>">
+              <div class="card ">
+                <div class="img-container">
+                  <img src="./img/<%= item.imageName %>" class="card-img-top store-img" alt="">
+                  <span class="store-item-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                  </span>
+                </div>
+                <div class="card-body">
+                  <div class="card-text d-flex justify-content-between text-capitalize">
+                    <h5 id="store-item-name"><%= item.name %></h5>
+                    <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold"><%= item.price %></strong></h5>
+                  </div>
+                  <p class="card-text"><%= item.description %></p>
+                </div>
+              </div>
+            </div>
+          <% }) %>
+    </div> <!-- end of row 2 -->
+    <br>
+
+
+
+<!-- ================================================================== -->
+
+    <h1  class="text-center">Smart Appliances</h1>
+    <br>
+    <div class="row" class="store-items" id="store-items">
+        <% items.smartappliances.forEach(function(item){ %>
+            <div class="col-sm-12 col-md-4 col-lg-4 col-md-4 mx-auto my-3 store-item " data-item-id="<%= item.id %>">
+              <div class="card ">
+                <div class="img-container">
+                  <img src="./img/<%= item.imageName %>" class="card-img-top store-img" alt="">
+                  <span class="store-item-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                  </span>
+                </div>
+                <div class="card-body">
+                  <div class="card-text d-flex justify-content-between text-capitalize">
+                    <h5 id="store-item-name"><%= item.name %></h5>
+                    <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold"><%= item.price %></strong></h5>
+                  </div>
+                  <p class="card-text"><%= item.description %></p>
+                </div>
+              </div>
+            </div>
+          <% }) %>
+    </div> <!-- end of row 3 -->
+
+  </section>
+
+
+
+
+    <footer>
+        <p>WATT2BUY, Copyright &copy; 2020</p>
+    </footer>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+</body>
